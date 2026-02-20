@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Col } from "@/ui/Col";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,7 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="min-h-svh max-w-md mx-auto">
+      <body className="min-h-svh max-w-md mx-auto py-12">
         <div
           className="w-full h-6 -mb-3 relative"
           style={{
@@ -23,14 +22,14 @@ export default function RootLayout({
           }}
         />
         <div
-          className="min-h-32 mx-2 px-4 py-6"
+          className="min-h-32 mx-2 px-6 py-6"
           style={{
             backgroundImage: "url('/media/parchment-body.gif')",
             backgroundSize: "100% 6rem",
             backgroundRepeat: "repeat-y",
           }}
         >
-          <Col>{children}</Col>
+          {children}
         </div>
         <div
           className="w-full h-6 -mt-3 relative"

@@ -1,4 +1,3 @@
-import React from "react";
 import type { MDXComponents } from "mdx/types";
 import Image, { type ImageProps } from "next/image";
 import { Thead } from "@/ui/Thead";
@@ -13,20 +12,26 @@ const components: MDXComponents = {
   th: Th,
   tr: Tr,
   td: Td,
-  h1: ({ ...props }) => <h1 className="text-3xl" {...props} />,
-  h2: ({ ...props }) => <h2 className="text-xl" {...props} />,
-  h3: ({ ...props }) => <h2 className="text-lg" {...props} />,
-  ul: ({ ...props }) => <ul className="list-disc ml-6" {...props} />,
-
+  table: ({ ...props }) => <table className="mb-2" {...props} />,
+  p: ({ ...props }) => <p className="mb-2" {...props} />,
+  h1: ({ ...props }) => (
+    <h1 className="text-3xl mb-4 mt-4 first:mt-0" {...props} />
+  ),
+  h2: ({ ...props }) => (
+    <h2 className="text-2xl mb-2 mt-2 first:mt-0" {...props} />
+  ),
+  h3: ({ ...props }) => <h2 className="text-xl mb-2" {...props} />,
+  ul: ({ ...props }) => <ul className="list-disc ml-6 mb-2" {...props} />,
   img: ({ alt, ...props }) => (
     <Image
-      className="block w-20 shrink-0"
+      className="block w-20 shrink-0 mb-2"
       alt={alt ?? ""}
       width={160}
       height={160}
       {...(props as Omit<ImageProps, "alt">)}
     />
   ),
+  hr: ({ ...props }) => <hr className="my-4 opacity-40" {...props} />,
 };
 
 export function useMDXComponents(): MDXComponents {
