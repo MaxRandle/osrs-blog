@@ -11,11 +11,21 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const BASE_URL = "http://localhost:4000";
 
+async function isServerRunning() {
+  try {
+    await fetch(BASE_URL);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 function startDevServer() {
   return new Promise((resolve, reject) => {
     const server = spawn("npm", ["run", "dev", "--", "-p", "4000"], {
       cwd: join(__dirname, ".."),
       stdio: ["ignore", "pipe", "pipe"],
+      detached: true,
     });
     server.stdout.on("data", (data) => {
       const text = data.toString();
@@ -29,9 +39,14 @@ function startDevServer() {
   });
 }
 
-console.log("Starting dev server...");
-const server = await startDevServer();
-console.log("Dev server ready. Taking screenshots...\n");
+let server = null;
+if (await isServerRunning()) {
+  console.log("Dev server already running, reusing it.\n");
+} else {
+  console.log("Starting dev server...");
+  server = await startDevServer();
+  console.log("Dev server ready. Taking screenshots...\n");
+}
 
 const routes = [
   "/colo-rewards/1",
@@ -69,5 +84,5 @@ for (const route of routes) {
 }
 
 await browser.close();
-server.kill();
+if (server) try { process.kill(-server.pid, "SIGTERM"); } catch {}
 console.log("Done.");
