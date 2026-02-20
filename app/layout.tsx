@@ -13,7 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="min-h-svh max-w-md mx-auto py-12">
+      <body className="min-h-svh max-w-md mx-auto my-12">
         <div
           className="w-full h-6 -mb-3 relative"
           style={{

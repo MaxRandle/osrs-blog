@@ -15,7 +15,7 @@ const components: MDXComponents = {
   table: ({ ...props }) => <table className="mb-2" {...props} />,
   p: ({ ...props }) => <p className="mb-2" {...props} />,
   h1: ({ ...props }) => (
-    <h1 className="text-3xl mb-4 mt-4 first:mt-0" {...props} />
+    <h1 className="text-3xl text-center mb-4 mt-4 first:mt-0" {...props} />
   ),
   h2: ({ ...props }) => (
     <h2 className="text-2xl mb-2 mt-2 first:mt-0" {...props} />
