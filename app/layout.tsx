@@ -38,7 +38,7 @@ export default function RootLayout({
             backgroundSize: "100% auto",
           }}
         >
-          <p className="text-xs opacity-10">u/mad-max-the-axe</p>
+          <p className="text-xs opacity-10">u/Mad_Max_The_Axe</p>
         </div>
       </body>
     </html>
