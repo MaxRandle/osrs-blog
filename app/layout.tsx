@@ -32,12 +32,14 @@ export default function RootLayout({
           {children}
         </div>
         <div
-          className="w-full h-6 -mt-3 relative"
+          className="w-full h-6 -mt-3 relative px-8 flex items-center justify-center"
           style={{
             backgroundImage: "url('/media/parchment-bottom.png')",
             backgroundSize: "100% auto",
           }}
-        />
+        >
+          <p className="text-xs opacity-10">u/mad-max-the-axe</p>
+        </div>
       </body>
     </html>
   );
