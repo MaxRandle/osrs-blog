@@ -53,6 +53,7 @@ const routes = [
   "/colo-rewards/2",
   "/colo-rewards/3",
   "/colo-rewards/4",
+  "/colo-rewards/5",
 ];
 
 const outputDir = join(__dirname, "..", "screenshots");
@@ -84,5 +85,8 @@ for (const route of routes) {
 }
 
 await browser.close();
-if (server) try { process.kill(-server.pid, "SIGTERM"); } catch {}
+if (server)
+  try {
+    process.kill(-server.pid, "SIGTERM");
+  } catch {}
 console.log("Done.");
