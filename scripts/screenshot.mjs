@@ -54,6 +54,11 @@ const routes = [
   "/colo-rewards/3",
   "/colo-rewards/4",
   "/colo-rewards/5",
+  "/colo-rewards-short/1",
+  "/colo-rewards-short/2",
+  "/colo-rewards-short/3",
+  "/colo-rewards-short/4",
+  "/colo-rewards-short/5",
 ];
 
 const outputDir = join(__dirname, "..", "screenshots");
