@@ -49,11 +49,6 @@ if (await isServerRunning()) {
 }
 
 const routes = [
-  "/colo-rewards/1",
-  "/colo-rewards/2",
-  "/colo-rewards/3",
-  "/colo-rewards/4",
-  "/colo-rewards/5",
   "/colo-rewards-short/1",
   "/colo-rewards-short/2",
   "/colo-rewards-short/3",
