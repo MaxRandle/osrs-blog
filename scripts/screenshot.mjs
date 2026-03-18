@@ -54,6 +54,7 @@ const routes = [
   "/colo-rewards-short/3",
   "/colo-rewards-short/4",
   "/colo-rewards-short/5",
+  "/summer-sweepup/fractal-gauntlet",
 ];
 
 const outputDir = join(__dirname, "..", "screenshots");
