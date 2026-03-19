@@ -2,10 +2,11 @@
 // Captures transparent PNG screenshots of each page's parchment body.
 
 import puppeteer from "puppeteer";
-import { mkdirSync } from "fs";
+import { mkdirSync, rmSync } from "fs";
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
 import { spawn } from "child_process";
+import { glob } from "fs/promises";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -48,16 +49,20 @@ if (await isServerRunning()) {
   console.log("Dev server ready. Taking screenshots...\n");
 }
 
-const routes = [
-  "/colo-rewards-short/1",
-  "/colo-rewards-short/2",
-  "/colo-rewards-short/3",
-  "/colo-rewards-short/4",
-  "/colo-rewards-short/5",
-  "/summer-sweepup/fractal-gauntlet",
-];
+const appDir = join(__dirname, "..", "app");
+const pageFiles = [];
+for await (const f of glob("**/page.{mdx,tsx}", { cwd: appDir })) {
+  pageFiles.push(f);
+}
+const routes = pageFiles
+  .map((f) => {
+    const dir = dirname(f).replace(/\\/g, "/");
+    return dir === "." ? "/" : "/" + dir;
+  })
+  .sort();
 
 const outputDir = join(__dirname, "..", "screenshots");
+rmSync(outputDir, { recursive: true, force: true });
 mkdirSync(outputDir, { recursive: true });
 
 const browser = await puppeteer.launch();
