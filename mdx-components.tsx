@@ -24,7 +24,7 @@ const components: MDXComponents = {
   ul: ({ ...props }) => <ul className="list-disc ml-6 mb-2" {...props} />,
   img: ({ alt, ...props }) => (
     <Image
-      className="block w-20 shrink-0 mb-2"
+      className="block w-20 shrink-0 mb-2 drop-shadow-black drop-shadow-md"
       alt={alt ?? ""}
       width={160}
       height={160}
