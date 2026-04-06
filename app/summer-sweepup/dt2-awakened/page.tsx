@@ -31,28 +31,15 @@ export default function Page() {
         </p>
 
         <p>
-          First things first the awakened bosses need to return an{" "}
+          One option would be for the awakened bosses to return an{" "}
           <strong>Awakener&apos;s orb as a guaranteed drop.</strong> This seems
-          necessary and it&apos;s not obvious if there&apos;s a decent
-          alternative option. Yama radiant contracts already work this way.
+          reasonable and Yama radiant contracts already work this way.
         </p>
 
         <p>
-          Beyond that we should have a discussion what is a fair reward for
-          killing an awakened boss considering:
-        </p>
-
-        <ul className="list-disc pl-6">
-          <li>You risk an Awakener&apos;s orb each attempt</li>
-          <li>
-            The fights take 2 - 4 times longer than their regular counterparts
-          </li>
-        </ul>
-
-        <p>
-          A simple place to start would be multiplied loot rolls but it&apos;s
-          worth considering fine grain options like individually boosted pet
-          chance, axe pieces, vestige rolls, etc.
+          Another option would be{" "}
+          <strong>some kind of permanent unlock mechanism</strong> but it&apos;s
+          not obvious how this would work.
         </p>
       </div>
     </>
