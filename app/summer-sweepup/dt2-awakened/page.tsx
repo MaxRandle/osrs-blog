@@ -26,8 +26,9 @@ export default function Page() {
           That&apos;s why It&apos;s a hugely disappointing feeling when you
           spend hours and hours learning an incredibly difficult boss only to
           kill it once and then be financially disincentivised from ever killing
-          it again. It would be great to see these bosses made to be repeatable
-          without losing 400k per fight, even if you&apos;re successful.
+          it again. It would be amazing to see these bosses made to be
+          repeatable without losing 400k per fight, even if you&apos;re
+          successful.
         </p>
 
         <p>
@@ -37,10 +38,16 @@ export default function Page() {
         </p>
 
         <p>
-          Another option would be{" "}
-          <strong>some kind of permanent unlock mechanism</strong> but it&apos;s
-          not obvious how this would work.
+          Awakened bosses presently have 3x higher chance to roll a unique drop
+          than their normal mode counterparts. It&apos;s worth discussing
+          whether this would still be appropriate if they were to return an orb
+          on each kill considering that:
         </p>
+
+        <ul className="list-disc pl-8">
+          <li>awakened bosses have 2-4 times more hit points</li>
+          <li>you risk an orb each attempt</li>
+        </ul>
       </div>
     </>
   );
