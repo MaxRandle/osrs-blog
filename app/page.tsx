@@ -10,11 +10,10 @@ function getPages(): string[] {
     for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
       if (entry.isDirectory()) {
         walk(path.join(dir, entry.name));
-      } else if (entry.name === "page.mdx") {
-        const route = path
-          .relative(appDir, dir)
-          .split(path.sep)
-          .join("/");
+      } else if (entry.name === "page.mdx" || entry.name === "page.tsx") {
+        const relative = path.relative(appDir, dir);
+        if (!relative) continue;
+        const route = relative.split(path.sep).join("/");
         pages.push("/" + route);
       }
     }
