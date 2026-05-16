@@ -23,31 +23,39 @@ export default function Page() {
 
       <div className="mt-4 space-y-2">
         <p>
-          That&apos;s why It&apos;s a hugely disappointing feeling when you
-          spend hours and hours learning an incredibly difficult boss only to
-          kill it once and then be financially disincentivised from ever killing
-          it again. It would be amazing to see these bosses made to be
-          repeatable without losing 400k per fight, even if you&apos;re
-          successful.
+          Imagine the feeling of equipping Blorva after you&apos;ve sunk
+          countless hours, sacrificed millions upon millions of hard earned gp
+          for death fees, Awakener&apos;s orbs, & supplies, and put in the
+          grueling effort required to ascend yourself into the type of next
+          level of gamer that is capable of achieving a kill on all four
+          Awakened DT2 bosses.
         </p>
 
         <p>
-          One option would be for the awakened bosses to return an{" "}
-          <strong>Awakener&apos;s orb as a guaranteed drop.</strong> This seems
-          reasonable and Yama radiant contracts already work this way.
+          And then after all that, you&apos;re just expected to forget these
+          bosses exist and never fight them again because doing so is
+          prohibitively expensive for mains, or potentially completely
+          infeasible for irons. This is just so disappointing and genuinely a
+          waste of content.
         </p>
 
         <p>
-          Awakened bosses presently have 3x higher chance to roll a unique drop
-          than their normal mode counterparts. It&apos;s worth discussing
-          whether this would still be appropriate if they were to return an orb
-          on each kill considering that:
+          The issue is that the orb fee is paid whether you succeed or fail. You
+          should not be punished for a successful kill. Resolving this issue
+          would allow the bosses to be viably repeatable.
         </p>
 
-        <ul className="list-disc pl-8">
-          <li>awakened bosses have 2-4 times more hit points</li>
-          <li>you risk an orb each attempt</li>
-        </ul>
+        <p>
+          One option would be that{" "}
+          <strong>
+            Awakened bosses return an Awakener&apos;s orb as a guaranteed drop.
+          </strong>
+        </p>
+
+        <p>
+          This seems reasonable and Yama radiant contracts already work this
+          way. You&apos;d still forfeit the orb on a failed attempt.
+        </p>
       </div>
     </>
   );
